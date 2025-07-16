@@ -1,0 +1,61 @@
+.small {
+  font-size: 70%;
+  line-height: 100%;
+}
+
+<style>
+p.caption {
+  font-size: 0.6em;
+}
+</style>
+
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'),
+       url('https://github.com/yihui/xaringan/releases/download/v0.1/yanone-kaffeesatz.woff') format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif'), local('DroidSerif'),
+       url('https://github.com/yihui/xaringan/releases/download/v0.1/droid-serif.woff') format('woff');
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+       url('https://github.com/yihui/xaringan/releases/download/v0.1/source-code-pro.woff') format('woff');
+}
+
+body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Songti SC', serif; }
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz', 'Palatino Linotype', 'Book Antiqua', Palatino, 'STHeiti', 'SimHei', 'Microsoft YaHei';
+  font-weight: normal;
+}
+.remark-code, .remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace; }
+
+
+  .blue{
+  color: #4d8dc9;
+  }
+}
+
+.remark-slide-content {
+  background-image: url("img/Primary logo.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 80px;
+  padding-top: 20px;  /* 避免文字贴太近 logo */
+}
+
+/* 反色页面不显示 logo（通常用于 .inverse） */
+.remark-slide-content.inverse {
+  background-image: none !important;
+}
+  
+  

@@ -1,544 +1,478 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Presentation Ninja</title>
+    <title>Beyond words: Analysing the relationship between built environment and walking behaviour of elderly people using multimodal AI</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Yihui Xie" />
-    <meta name="author" content="Garrick Aden-Buie" />
-    <meta name="date" content="2025-07-16" />
-    <script src="leeds_talk_slide_files/header-attrs/header-attrs.js"></script>
-    <link href="leeds_talk_slide_files/htmltools-fill/fill.css" rel="stylesheet" />
-    <script src="leeds_talk_slide_files/htmlwidgets/htmlwidgets.js"></script>
-    <link href="leeds_talk_slide_files/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="leeds_talk_slide_files/datatables-binding/datatables.js"></script>
-    <script src="leeds_talk_slide_files/jquery/jquery-3.6.0.min.js"></script>
-    <link href="leeds_talk_slide_files/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="leeds_talk_slide_files/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="leeds_talk_slide_files/dt-core/js/jquery.dataTables.min.js"></script>
-    <link href="leeds_talk_slide_files/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
-    <script src="leeds_talk_slide_files/crosstalk/js/crosstalk.min.js"></script>
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <meta name="author" content="Zirui Guo" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <script src="libs/peerjs/peerjs.min.js"></script>
+    <script src="libs/tiny.toast/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast/broadcast.js"></script>
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/mark.js/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d2f3236761ef4e24a00f83d302224ea8","expires":1}</script>
+    <script src="libs/himalaya/himalaya.js"></script>
+    <link href="libs/editable/editable.css" rel="stylesheet" />
+    <script src="libs/editable/editable.js"></script>
+    <script src="libs/xaringanExtra_fit-screen/fit-screen.js"></script>
+    <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-.title[
-# Presentation Ninja
-]
-.subtitle[
-## ⚔️ xaringan +<br/>😎 xaringanthemer
-]
-.author[
-### Yihui Xie
-]
-.author[
-### Garrick Aden-Buie
-]
-.date[
-### 2025-07-16
-]
+
+
+class: center, middle
+## Beyond words: Analysing the relationship between built environment and walking behaviour of elderly people using multimodal AI
+
+[Zirui Guo](https://github.com/Gzrayyy)
+
+**Supervisor**  
+[Dr Mengdie Zhuang](https://www.sheffield.ac.uk/ijc/people/mengdie-zhuang) &amp;
+[Dr Suvodeep Mazumdar](https://www.sheffield.ac.uk/ijc/people/suvodeep-mazumdar) 
+
+2025-07-16
 
 ---
 
 
 
 
+&lt;script&gt;
+  window.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".remark-slide-content");
 
+    slides.forEach(slide =&gt; {
+      const logoWrapper = document.createElement("div");
+      logoWrapper.className = "slide-logo";
+      const img = document.createElement("img");
+      img.src = "img/Primary logo.png";
+      img.alt = "Logo";
+      logoWrapper.appendChild(img);
+      slide.appendChild(logoWrapper);
+    });
+  });
+&lt;/script&gt;
 
-## Typography
-
-Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
-
-[Link to another slide](#colors).
-
-### Lorem Ipsum
-
-Dolor imperdiet nostra sapien scelerisque praesent curae metus facilisis dignissim tortor. 
-Lacinia neque mollis nascetur neque urna velit bibendum. 
-Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
-
-- Dolor cubilia nostra nunc sodales
-
-- Consectetur aliquet mauris blandit
-
-- Ipsum dis nec porttitor urna sed
-
----
-name: colors
-
-## Colors
-
-.left-column[
-Text color
-
-[Link Color](#3)
-
-**Bold Color**
-
-_Italic Color_
-
-`Inline Code`
-]
-
-.right-column[
-Lorem ipsum dolor sit amet, [consectetur adipiscing elit (link)](#3), 
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Erat nam at lectus urna.
-Pellentesque elit ullamcorper **dignissim cras tincidunt (bold)** lobortis feugiat. 
-_Eros donec ac odio tempor_ orci dapibus ultrices. 
-Id porta nibh venenatis cras sed felis eget velit aliquet.
-Aliquam id diam maecenas ultricies mi.
-Enim sit amet 
-`code_color("inline")`
-venenatis urna cursus eget nunc scelerisque viverra.
-]
-
----
-
-# Big Topic or Inverse Slides `#`
-
-## Slide Headings `##`
-
-### Sub-slide Headings `###`
-
-#### Bold Call-Out `####`
-
-This is a normal paragraph text. Only use header levels 1-4.
-
-##### Possible, but not recommended `#####`
-
-###### Definitely don't use h6 `######`
-
----
-
-# Left-Column Headings
-
-.left-column[
-## First
-
-## Second
-
-## Third
-]
-
-.right-column[
-Dolor quis aptent mus a dictum ultricies egestas.
-
-Amet egestas neque tempor fermentum proin massa!
-
-Dolor elementum fermentum pharetra lectus arcu pulvinar.
-]
-
----
-class: inverse center middle
-
-# Topic Changing Interstitial
-
---
-
-```
-class: inverse center middle
-```
-
----
-layout: true
-
-## Blocks
-
----
-
-### Blockquote
-
-&gt; This is a blockquote following a header.
-&gt;
-&gt; When something is important enough, you do it even if the odds are not in your favor.
-
----
-
-### Code Blocks
-
-#### R Code
-
-
-``` r
-ggplot(gapminder) +
-  aes(x = gdpPercap, y = lifeExp, size = pop, color = country) +
-  geom_point() +
-  facet_wrap(~year)
-```
-
-#### JavaScript
-
-```js
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+&lt;style&gt;
+.slide-logo {
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  width: 250px;
+  z-index: 99;
 }
-```
+.slide-logo img {
+  width: 100%;
+  height: auto;
+}
 
----
-
-### More R Code
-
-
-``` r
-dplyr::starwars %&gt;% dplyr::slice_sample(n = 4)
-```
-
----
+/* 自动隐藏 inverse 页面上的 logo */
+.remark-slide-content.inverse .slide-logo {
+  display: none;
+}
+&lt;/style&gt;
 
 
-``` r
-cli::cli_alert_success("It worked!")
-```
-
-```
-## ✔ It worked!
-```
-
---
 
 
-``` r
-message("Just a friendly message")
-```
-
-```
-## Just a friendly message
-```
-
---
 
 
-``` r
-warning("This could be bad...")
-```
+## Background
+### Global aging challenge
 
-```
-## Warning: This could be bad...
-```
-
---
-
-
-``` r
-stop("I hope you're sitting down for this")
-```
-
-```
-## Error: I hope you're sitting down for this
-```
-
-
----
-layout: true
-
-## Tables
-
----
-exclude: false
-
-
-``` r
-tibble::as_tibble(mtcars)
-```
-
-```
-## # A tibble: 32 × 11
-##      mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  21       6  160    110  3.9   2.62  16.5     0     1     4     4
-##  2  21       6  160    110  3.9   2.88  17.0     0     1     4     4
-##  3  22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
-##  4  21.4     6  258    110  3.08  3.22  19.4     1     0     3     1
-##  5  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2
-##  6  18.1     6  225    105  2.76  3.46  20.2     1     0     3     1
-##  7  14.3     8  360    245  3.21  3.57  15.8     0     0     3     4
-##  8  24.4     4  147.    62  3.69  3.19  20       1     0     4     2
-##  9  22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2
-## 10  19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4
-## # ℹ 22 more rows
-```
-
----
-
-
-``` r
-knitr::kable(head(mtcars), format = 'html')
-```
-
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; mpg &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; cyl &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; disp &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; hp &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; drat &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; wt &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; qsec &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; vs &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; am &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; gear &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; carb &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.620 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 16.46 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 Wag &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.875 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Datsun 710 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 22.8 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 108 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 93 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.85 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.320 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.61 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Hornet 4 Drive &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 258 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.08 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.215 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 19.44 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Hornet Sportabout &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 360 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 175 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.15 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.440 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Valiant &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 225 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.76 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.460 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 20.22 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-exclude: false
-
-
-``` r
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
-```
-
-<div class="datatables html-widget html-fill-item" id="htmlwidget-c6fe7c47828ea233fcfc" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c6fe7c47828ea233fcfc">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4},{"name":"drat","targets":5},{"name":"wt","targets":6},{"name":"qsec","targets":7},{"name":"vs","targets":8},{"name":"am","targets":9},{"name":"gear","targets":10},{"name":"carb","targets":11}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
-
----
-layout: true
-
-## Lists
-
----
+According to &lt;a name=cite-unitednations_world_2025&gt;&lt;/a&gt;[United Nations (2025)](#bib-unitednations_world_2025), the global population
+aged 65 and above reached 771 million, nearly 10% of the world’s total, and is projected
+to double the number of children under 5 and nearly equal those under 12 by 2050. In
+England and Wales, this population grew by 20% between the 2011 and 2021 censuses, from
+9.2 to 11 million &lt;a name=cite-officefornationalstatistics_profile_2023&gt;&lt;/a&gt;([Office for National Statistics, 2023](#bib-officefornationalstatistics_profile_2023)).
 
 .pull-left[
-#### Here is an unordered list:
+&lt;img src="img/worldpop.png" width="100%" style="display: block; margin: auto;" /&gt;
+.small[Source: United Nation]]
+---
+## Background
+### Elderly people and walking
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+These demographic shifts highlight the importance of encouraging elderly people to walk, 
+which enhances life expectancy, health.
+Moreover, evidence shows that the willingness to walk among
+elderly people was significantly associated with the physical characteristics of streets &lt;a name=cite-joseph_where_2007&gt;&lt;/a&gt;([Joseph and Zimring, 2007](#bib-joseph_where_2007)), underscoring the need to study the built environment to encourage elderly people to walk.
+
+In recent years, a great deal of research has been done on walkability, which is a key
+metric for evaluating the built environment. Despite walkability is widely used, its measurement and the datasets vary widely.
+
+---
+## Literature Review
+### The innovation of walkability
+
+.pull-left[
+"And third, the sidewalk must have users on it fairly continuously, both to add to the number of effective eyes on the street and to induce the people in buildings along the street to watch the sidewalks in sufficient numbers. Nobody enjoys sitting on a stoop or looking out a window at an empty street. Almost nobody does such a thing. Large numbers of people entertain themselves, off and on, by watching street activity." &lt;a name=cite-jacobs_death_1961&gt;&lt;/a&gt;[Jacobs (1961)](#bib-jacobs_death_1961)
+]
+
+
+.pull-right[
+&lt;img src="img/Jane_Jacobs.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+.small[Jane Jacobs. Source: [Wikipedia](https://en.wikipedia.org/wiki/Jane_Jacobs)]
+]
+
+.footnote[*The Death and Life of Great American Cities*]
+
+---
+
+## Literature Review
+
+### The innovation of walkability
+- &lt;a name=cite-gehl_life_1987&gt;&lt;/a&gt;[Gehl (1987)](#bib-gehl_life_1987) proposed tripartite criteria of protection, comfort, and enjoyment, emphasising perception and spatial details in the walking experience.
+
+- &lt;a name=cite-appleyard_livable_1980&gt;&lt;/a&gt;[Appleyard (1980)](#bib-appleyard_livable_1980) proposed the concept of ‘liveable streets’ via empirical research, highlighting the impact of transportation on the quality of community life.
+
+- &lt;a name=cite-frank_impacts_1994&gt;&lt;/a&gt;[Frank, Lawrence D and Pivo, Gary (1994)](#bib-frank_impacts_1994) was the first to empirically quantify the impact of land use mix and density on walking, laying the methodological groundwork for subsequent efforts to develop standardised metrics for assessing pedestrian-friendly environments.
+
+- &lt;a name=cite-cervero_travel_1997&gt;&lt;/a&gt;[Cervero and Kockelman (1997)](#bib-cervero_travel_1997) proposed a "3D" model (Density, Diversity, Design) to systematically frame the relationship between built environment and walking behaviour.
+
+---
+## Literature Review
+
+### Built Environment-focused Definitions
+
+- Neighbourhood walkability reflects the degree to which **neighbourhoods are conducive to walking activity**
+&lt;a name=cite-timmermans_associations_2021&gt;&lt;/a&gt;([Timmermans et al., 2021](#bib-timmermans_associations_2021))
+
+### Perception-based Definitions
+- The term walkability refers to those **design elements** that guarantee the **accessibility**, **comfort**, and **safety** of the urban setting for walking
+&lt;a name=cite-bandini_social_2021&gt;&lt;/a&gt;([Bandini and Gasparini, 2021](#bib-bandini_social_2021))
+
+### Operational / Framework-based Definitions (used to measure walkability)
+- 5D framework: **Density**, **Diversity**, **Design**, **Destination Accessibility**, and **Distance to Transit** &lt;a name=cite-ewing_travel_2010&gt;&lt;/a&gt;([Ewing and Cervero, 2010](#bib-ewing_travel_2010))
+
+---
+## Literature Review
+
+### Walking for elderly people
+
+.pull-left[
+- Low-risk
+- Sociable
+- Reduce the risk of chronic diseases
+- Alleviate elderly people’s negative emotions
 ]
 
 .pull-right[
+&lt;img src="img/eld.jpg" width="75%" style="display: block; margin: auto;" /&gt;
 
-#### And an ordered list:
+.small[Source: [NHS](https://www.birminghamsolihull.icb.nhs.uk/news-and-events/news/recognition-awards-birmingham-and-solihull-initiatives-driving-improvements-culture-and-quality-across-nhs)]
+]
+---
+## Literature Review
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+### Current systematic literature review on walkability
+Despite the well-documented benefits of walking for older adults, few systematic reviews have specifically focused on this demographic. &lt;a name=cite-edwards_examining_2018&gt;&lt;/a&gt;[Edwards and Dulai (2018)](#bib-edwards_examining_2018) examined walking behaviours in elderly people but focused primarily on stair use rather than broader outdoor built environment features. 
+&lt;a name=cite-akinci_how_2022&gt;&lt;/a&gt;[Akinci Delclòs-Alió et al. (2022)](#bib-akinci_how_2022), on the other hand, compared how walkability has been measured for elderly people versus the general population but did not centre their review on elderly people themselves. 
+
+Thus, there is a need for a systematic literature review on elderly people.
+
+---
+## Literature Review
+
+### Walkability measurement
+- On-site field study
+  - Interview and questionnaire
+  - Field audit
+  
+- GIS data based
+  - POI, Land use, Street connectivity
+  
+- SVI
+  - Visual audit
+  - AI and Computer version
+---
+class: inverse middle
+
+.center[
+# Research questions
 ]
 
 ---
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
+class: inverse middle
+.center[
+# Research questions
+]
+- What is the current state of research on walkability for elderly people?
 
 ---
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
+## Methodology detail (Study 1)
+&lt;img src="img/PRISMAframe.jpg" width="45%" style="display: block; margin: auto;" /&gt;
 
 ---
-layout: true
-
-## Plots
-
----
-
-
-``` r
-library(ggplot2)
-(g &lt;- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
-```
-
-&lt;img src="leeds_talk_slide_files/figure-html/plot-example-1.png" width="100%" /&gt;
-
----
-
-
-``` r
-g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
-  ggtitle("A Plot About Cars")
-```
-
-&lt;img src="leeds_talk_slide_files/figure-html/plot-example-themed-1.png" width="100%" /&gt;
-
-.footnote[Requires `{showtext}`]
-
----
-layout: false
-
-## Square image
-
-&lt;center&gt;&lt;img src="https://octodex.github.com/images/labtocat.png" alt="GithHub Octocat" height="400px" /&gt;&lt;/center&gt;
-
-.footnote[GitHub Octocat]
-
----
-
-### Wide image
-
-![A wide image with a diagram of branching in git.](https://docs.github.com/assets/images/help/repository/branching.png)
-
-.footnote[Wide images scale to 100% slide width]
-
----
-
-## Two images
-
-.pull-left[
-![A GitHub Octocat, style "mother hubber"](https://octodex.github.com/images/motherhubbertocat.png)
+class: inverse middle
+.center[
+# Result of Study One
 ]
 
-.pull-right[
-![A GitHub Octocat, style "dinotcat"](https://octodex.github.com/images/dinotocat.png)
-]
 
 ---
+### Disciplines distribution
+&lt;img src="img/discipline.jpg" width="100%" style="display: block; margin: auto;" /&gt;
 
-### Definition lists can be used with HTML syntax.
 
-&lt;dl&gt;
-&lt;dt&gt;Name&lt;/dt&gt;
-&lt;dd&gt;Godzilla&lt;/dd&gt;
-&lt;dt&gt;Born&lt;/dt&gt;
-&lt;dd&gt;1952&lt;/dd&gt;
-&lt;dt&gt;Birthplace&lt;/dt&gt;
-&lt;dd&gt;Japan&lt;/dd&gt;
-&lt;dt&gt;Color&lt;/dt&gt;
-&lt;dd&gt;Green&lt;/dd&gt;
-&lt;/dl&gt;
+---
+### Annual publication of included papers
+&lt;img src="img/year.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+### Annual publication of included papers
+&lt;img src="img/frequency.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+### Demographic datail
+- Majority of studies (n = 28, 47%) defined elderly as 65+, consistent with [United Nations (2025)](#bib-unitednations_world_2025) definition; 
+12 studies adopted a broader threshold of 60+.
+
+- A smaller subset of studies employed more detailed stratification, such as classifying them into different age bands (e.g., aged 60
+to 74, 75 to 89, and over 90), aimed to understand how the specific needs of each group affect
+their mobility and walkability in urban public spaces.
+
+- A few focused on specific subgroups, such elderly people with different mobility &lt;a name=cite-chen_study_2024&gt;&lt;/a&gt;([Chen Huang et al., 2024](#bib-chen_study_2024)).
+
+---
+### Walkability definition
+- Only 14 out of 60 studies (23%) explicitly defined walkability, while the remaining 77% used the concept without a formal definition.
+
+- *Health Science &amp; Gerontology* studies (n = 9) emphasized walkability as supportive environments for safe, comfortable, and active walking.
+
+- *Urban Studies &amp; Transportation*, and *Geospatial Science* papers defined walkability in terms of built environment “friendliness,” accessibility, or design features like density and diversity.
+
+
+---
+### Features and subcategories used for walkability
+&lt;div style="transform: scale(0.45);
+            transform-origin: top left;
+            width: 1600px; 
+            height: 1200px;
+            overflow: hidden;
+            margin: 0 auto;"&gt;
+  
+  &lt;iframe src="img/sunburst_plot.html"
+          width="1600"
+          height="1200"
+          frameborder="0"
+          style="border: 1px solid #ccc; border-radius: 6px;"&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+---
+### Heatmap of walkability features
+
+
+&lt;img src="img/hm1.png" width="120%" style="display: block; margin: auto;" /&gt;
+.small[Heatmap of studies sorted by the number of walkability features used]
+
+
+---
+### Heatmap of walkability features
+
+
+&lt;img src="img/hm2.png" width="120%" style="display: block; margin: auto;" /&gt;
+.small[Heatmap of studies sorted by the number of walkability subcategories used]
+
+---
+### Details of typical datasets
+
+&lt;img src="img/data_v.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+### Methodology used
+
+- Papers from Urban Studies &amp; Transportation, Geospatial Science, and Others typically aimed to propose new measurements to calculate walkability.
+
+- Studies from Health Science &amp; Gerontology typically preferred using existing methods to calculate walkability, such as Walk Score.
+
+
+---
+### Discussion and Conclusion
+
+- Oversimplified demographics: Broad age groups (60+/65+), no mobility stratification
+
+- Narrow methodology: Focus on macro-scale features, missing micro-scale factors
+
+- Missing elderly-specific frameworks: Current definitions ignore older adults' unique needs
+
+- Static approach: Neglects dynamic factors (weather, temperature, walking purpose, and time)
+
+
+---
+class: inverse middle
+.center[
+# Research questions
+]
+- What is the current state of research on walkability for elderly people?
+- How do different walkability index models perform in capturing elderly-specific needs, and which is the most suitable for this group under various scenarios?
+- How can the inclusion of contextual features improve walkability assessments for elderly people, and what are the spatial distribution patterns and key influencing factors of the resulting dynamic walkability index?
+- Is there a difference between elderly people and experts in their evaluation of walkability from elderly people perspective? (Optional)
+
+---
+## Methodology framework
+
+&lt;iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVIPrqKFc=/?embedMode=view_only_without_ui&amp;moveToViewport=-24505,-6021,15946,10181&amp;embedId=618613882657" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen&gt;&lt;/iframe&gt;
+
+
+
+---
+## Methodology detail (Study 2)
+&lt;img src="img/Study_2.jpg" width="78%" style="display: block; margin: auto;" /&gt;
+
+---
+## Methodology detail (Study 3)
+- Spatial pattern
+  - Global and Local Moran's I
+
+- Feature contribution
+  - SHAP model
+
+---
+## Methodology detail (Study 4)
+- Ground truth (for experts)
+  - Employ TrueSkill algorithm for rating SVIs
+  - Employ ML model for rating the rest of SVIs
+
+- Bivariate Moran's I
+  
+
+---
+## Potential contribution
+- Identify the research gap of walkability for elderly people
+
+- Identify contextual factors for elderly people is important
+
+- Quantify contextual factors on walkability for elderly people
+
+- Reveal expert-elderly walkability perception disconnect
+
+---
+## Timetable
+&lt;img src="img/timetable.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+---
+
+## Reference
+
+&lt;a name=bib-akinci_how_2022&gt;&lt;/a&gt;[Akinci, Z. S., X. Delclòs-Alió, et
+al.](#cite-akinci_how_2022) (2022). "How Different Are Objective
+Operationalizations of Walkability for Older Adults Compared to the
+General Population? A Systematic Review". In: _BMC Geriatrics_ 22.1, p.
+673.
+
+&lt;a name=bib-appleyard_livable_1980&gt;&lt;/a&gt;[Appleyard,
+D.](#cite-appleyard_livable_1980) (1980). "Livable Streets: Protected
+Neighborhoods?" In: _The Annals of the American Academy of Political
+and Social Science_ 451, pp. 106-117. JSTOR:
+[1043165](https://www.jstor.org/stable/1043165).
+
+&lt;a name=bib-bandini_social_2021&gt;&lt;/a&gt;[Bandini, S. and F.
+Gasparini](#cite-bandini_social_2021) (2021). "Social and active
+inclusion of the elderly in the city through affective walkability".
+In: _The Review of Socionetwork Strategies_ 15, pp. 557-573.
+
+&lt;a name=bib-cervero_travel_1997&gt;&lt;/a&gt;[Cervero, R. and K.
+Kockelman](#cite-cervero_travel_1997) (1997). "Travel Demand and the
+3Ds: Density, Diversity, and Design". In: _Transportation Research Part
+D: Transport and Environment_ 2.3, pp. 199-219.
+
+&lt;a name=bib-chen_study_2024&gt;&lt;/a&gt;[Chen, Y., X. Huang, et
+al.](#cite-chen_study_2024) (2024). "A Study on Street Walkability for
+Older Adults with Different Mobility Abilities Combining Street View
+Image Recognition and Deep Learning - The Case of Chengxianjie
+Community in Nanjing (China)". In: _Computers, Environment and Urban
+Systems_ 112, p. 102151.
+
+---
+## Reference
+
+&lt;a name=bib-edwards_examining_2018&gt;&lt;/a&gt;[Edwards, N. and J.
+Dulai](#cite-edwards_examining_2018) (2018). "Examining the
+Relationships between Walkability and Physical Activity among Older
+Persons: What about Stairs?" In: _BMC Public Health_ 18.1, p. 1025.
+
+&lt;a name=bib-ewing_travel_2010&gt;&lt;/a&gt;[Ewing, R. and R.
+Cervero](#cite-ewing_travel_2010) (2010). "Travel and the Built
+Environment: A Meta-Analysis". In: _Journal of the American Planning
+Association_ 76.3, pp. 265-294.
+
+&lt;a name=bib-frank_impacts_1994&gt;&lt;/a&gt;[Frank, Lawrence D and Pivo,
+Gary](#cite-frank_impacts_1994) (1994). "Impacts of Mixed Use and
+Density on Utilization of Three Modes of Travel: Single-Occupant
+Vehicle, Transit, and Walking". In: _TRANSPORTATION RESEARCH RECORD_.
+
+&lt;a name=bib-gehl_life_1987&gt;&lt;/a&gt;[Gehl, J.](#cite-gehl_life_1987) (1987).
+_Life Between Buildings_. Van Nostrand Reinhold.
+
+&lt;a name=bib-jacobs_death_1961&gt;&lt;/a&gt;[Jacobs, J.](#cite-jacobs_death_1961)
+(1961). _The Death and Life of Great American Cities_. Random House.
+
+&lt;a name=bib-joseph_where_2007&gt;&lt;/a&gt;[Joseph, A. and C.
+Zimring](#cite-joseph_where_2007) (2007). "Where Active Older Adults
+Walk: Understanding the Factors Related to Path Choice for Walking
+Among Active Retirement Community Residents". In: _Environment and
+Behavior_ 39.1, pp. 75-105.
+
+&lt;a name=bib-officefornationalstatistics_profile_2023&gt;&lt;/a&gt;[Office for
+National Statistics](#cite-officefornationalstatistics_profile_2023)
+(2023). "Profile of the Older Population Living in England and Wales in
+2021 and Changes since 2011".
+
+---
+## Reference
+
+&lt;a name=bib-timmermans_associations_2021&gt;&lt;/a&gt;[Timmermans, E. J., M.
+Visser, et al.](#cite-timmermans_associations_2021) (2021).
+"Associations of changes in neighbourhood walkability with changes in
+walking activity in older adults: a fixed effects analysis". In: _BMC
+public health_ 21, pp. 1-13.
+
+&lt;a name=bib-unitednations_world_2025&gt;&lt;/a&gt;[United
+Nations](#cite-unitednations_world_2025) (2025). _World Population
+Prospects 2024: Summary of Results_. S.l.: UNITED NATIONS. ISBN:
+978-92-1-003169-1.
 
 ---
 class: center, middle
 
 # Thanks!
 
-Slides created via the R packages:
-
-[**xaringan**](https://github.com/yihui/xaringan)&lt;br&gt;
-[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-  "slideNumberFormat": "%current%",
   "highlightStyle": "github",
   "highlightLines": true,
-  "ratio": "16:9",
-  "countIncrementalSlides": true
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
