@@ -264,7 +264,9 @@ class: inverse middle
 ## Methodology detail (Study 1)
 
 .pull-left[
-Search term: "edelry people"
+Search strings: 
+
+( **"walk\*"** OR **"physical activity"** OR **"pedestrian"** OR **"physically active"** ) AND ( **"age"** OR **"aged"** OR **"elderly"** OR **"older"** ) AND **"walkab\*"** NOT **"walkabout"**
 
 .small[.footnote[*Flowchart of PRISMA*]]
 ]
@@ -289,6 +291,11 @@ knitr::include_graphics('img/discipline.jpg')
 ```
 
 The majority of publications belong to health science & gerontology, followed by urban studies & transportation and geospatial science.
+
+.pull-left[.small[
+.footnote[
+*Discipline distribution of included papers*
+]]]
 ---
 ### Annual publication of included papers
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
@@ -296,6 +303,12 @@ knitr::include_graphics('img/year.jpg')
 ```
 
 The number of publication experience a growth with fluctuation, and is expected to reach a new peak by 2025.
+
+.pull-left[.small[
+.footnote[
+*Annual publication of included papers*
+]]]
+
 ---
 ### The geographic distribution of publication
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
@@ -303,6 +316,12 @@ knitr::include_graphics('img/frequency.jpg')
 ```
 
 Imbalanced geographic distribution, with the majority of studies concentrated in developed countries.
+
+.pull-left[.small[
+.footnote[
+*Geographic distribution of included papers*
+]]]
+
 ---
 ### Demographic datail
 - Majority of studies (n = 28, 47%) defined elderly as 65+, consistent with `r Citet(myBib, 'unitednations_world_2025')` definition; 
@@ -316,6 +335,7 @@ their mobility and walkability in urban public spaces.
 
 ---
 ### Walkability definition
+
 - Only 14 out of 60 studies (23%) explicitly mentioned walkability, while the remaining 77% used the concept without a formal definition.
 
 - *Health Science & Gerontology* studies (n = 9) emphasized walkability as supportive environments for safe, comfortable, and active walking.
@@ -340,7 +360,10 @@ their mobility and walkability in urban public spaces.
   </iframe>
 </div>
 
-
+.pull-left[.small[
+.footnote[
+*Sunburst of walkability features*
+]]]
 
 ---
 ### Heatmap of walkability features
@@ -349,18 +372,27 @@ their mobility and walkability in urban public spaces.
 ```{r echo=FALSE, out.width='120%', fig.align='center'}
 knitr::include_graphics('img/hm1.png')
 ```
-.small[Heatmap of studies sorted by the number of walkability features used]
 
+Six studies (10%) employed more than 15 features, indicating highly comprehensive operationalisation, 22 studies (37%) used fewer than five features (such as sky proportion, land use, etc.).
 
+.pull-left[.small[
+.footnote[
+*Heatmap of studies sorted by the number of walkability features used*
+]]]
 ---
 ### Heatmap of walkability features
-
 
 ```{r echo=FALSE, out.width='120%', fig.align='center'}
 knitr::include_graphics('img/hm2.png')
 ```
-.small[Heatmap of studies sorted by the number of walkability subcategories used]
 
+Four studies (7%) used six or more subcategories, representing a highly multidimensional operationalisation.
+Conversely, 16 studies (27%) used features from only one or two subcategories, indicating a more narrowly focused approach. 
+
+.pull-left[.small[
+.footnote[
+*Heatmap of studies sorted by the number of walkability subcategories used*
+]]]
 ---
 ### Details of typical datasets
 
@@ -368,6 +400,10 @@ knitr::include_graphics('img/hm2.png')
 knitr::include_graphics('img/data_v.jpg')
 ```
 
+.pull-left[.small[
+.footnote[
+*Details of typical datasets*
+]]]
 
 ---
 ### Methodology used
