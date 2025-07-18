@@ -262,10 +262,19 @@ class: inverse middle
 
 ---
 ## Methodology detail (Study 1)
-```{r echo=FALSE, out.width='45%', fig.align='center'}
+
+.pull-left[
+Search term: "edelry people"
+
+.small[.footnote[*Flowchart of PRISMA*]]
+]
+
+.pull-right[
+```{r echo=FALSE, out.width='90%', fig.align='center'}
 knitr::include_graphics('img/PRISMAframe.jpg')
 ```
 
+]
 ---
 class: inverse middle
 .center[
@@ -279,19 +288,21 @@ class: inverse middle
 knitr::include_graphics('img/discipline.jpg')
 ```
 
-
+The majority of publications belong to health science & gerontology, followed by urban studies & transportation and geospatial science.
 ---
 ### Annual publication of included papers
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/year.jpg')
 ```
 
+The number of publication experience a growth with fluctuation, and is expected to reach a new peak by 2025.
 ---
-### Annual publication of included papers
+### The geographic distribution of publication
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/frequency.jpg')
 ```
 
+Imbalanced geographic distribution, with the majority of studies concentrated in developed countries.
 ---
 ### Demographic datail
 - Majority of studies (n = 28, 47%) defined elderly as 65+, consistent with `r Citet(myBib, 'unitednations_world_2025')` definition; 
@@ -305,7 +316,7 @@ their mobility and walkability in urban public spaces.
 
 ---
 ### Walkability definition
-- Only 14 out of 60 studies (23%) explicitly defined walkability, while the remaining 77% used the concept without a formal definition.
+- Only 14 out of 60 studies (23%) explicitly mentioned walkability, while the remaining 77% used the concept without a formal definition.
 
 - *Health Science & Gerontology* studies (n = 9) emphasized walkability as supportive environments for safe, comfortable, and active walking.
 
@@ -393,31 +404,6 @@ class: inverse middle
 
 <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVIPrqKFc=/?embedMode=view_only_without_ui&moveToViewport=-24505,-6021,15946,10181&embedId=618613882657" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
-
-
----
-## Methodology detail (Study 2)
-```{r echo=FALSE, out.width='78%', fig.align='center'}
-knitr::include_graphics('img/Study_2.jpg')
-```
-
----
-## Methodology detail (Study 3)
-- Spatial pattern
-  - Global and Local Moran's I
-
-- Feature contribution
-  - SHAP model
-
----
-## Methodology detail (Study 4)
-- Ground truth (for experts)
-  - Employ TrueSkill algorithm for rating SVIs
-  - Employ ML model for rating the rest of SVIs
-
-- Bivariate Moran's I
-  
-
 ---
 ## Potential contribution
 - Identify the research gap of walkability for elderly people
@@ -428,11 +414,6 @@ knitr::include_graphics('img/Study_2.jpg')
 
 - Reveal expert-elderly walkability perception disconnect
 
----
-## Timetable
-```{r echo=FALSE, out.width='100%', fig.align='center'}
-knitr::include_graphics('img/timetable.jpg')
-```
 ---
 
 ## Reference
