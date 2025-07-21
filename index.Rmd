@@ -422,7 +422,7 @@ knitr::include_graphics('img/data_v.jpg')
 
 - Missing elderly-specific frameworks: Current definitions ignore older adults' unique needs
 
-- Static approach: Neglects dynamic factors (weather, temperature, walking purpose, and time)
+- Neglects some contextual factors such as weather, temperature, walking purpose, and time of day
 
 
 ---
